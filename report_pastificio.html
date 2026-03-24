@@ -10,7 +10,6 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);min-height:100vh;background-image:radial-gradient(ellipse at 80% 0%,rgba(201,146,26,0.07) 0%,transparent 50%),radial-gradient(ellipse at 0% 100%,rgba(181,69,27,0.05) 0%,transparent 50%);}
 
-  /* LOGIN */
   #login{position:fixed;inset:0;background:var(--ink);display:flex;align-items:center;justify-content:center;z-index:9999;}
   .login-box{background:var(--warm);border-radius:24px;padding:52px 48px;max-width:400px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.4);border:1px solid rgba(201,146,26,0.2);animation:fadeUp .5s ease;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -23,7 +22,6 @@
   .login-btn:hover{transform:translateY(-2px);}
   .pin-err{color:var(--rust);font-size:13px;font-weight:600;margin-top:10px;min-height:18px;}
 
-  /* HEADER */
   header{background:var(--warm);border-bottom:1px solid var(--border);padding:0 28px;height:70px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:var(--shadow);}
   .hbrand{display:flex;align-items:center;gap:14px;}
   .hlogo{width:44px;height:44px;background:linear-gradient(135deg,var(--gold) 0%,#a07010 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 12px rgba(201,146,26,0.3);}
@@ -35,10 +33,9 @@
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
   .btn-sm{padding:8px 16px;border:1.5px solid var(--border);background:transparent;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;}
   .btn-sm:hover{border-color:var(--rust);color:var(--rust);}
-  .btn-print{background:var(--gold);color:#fff;border-color:var(--gold);}
-  .btn-print:hover{background:#a07010;border-color:#a07010;color:#fff;}
+  .btn-print{background:var(--gold);color:#fff!important;border-color:var(--gold)!important;}
+  .btn-print:hover{background:#a07010!important;}
 
-  /* TABS */
   .tabs-bar{background:var(--warm);padding:0 28px;display:flex;gap:2px;overflow-x:auto;border-bottom:1px solid var(--border);}
   .tab{padding:12px 20px;font-size:13px;font-weight:600;color:var(--muted);border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap;transition:all .2s;margin-bottom:-1px;}
   .tab:hover{color:var(--ink);}
@@ -46,7 +43,6 @@
 
   .main{max-width:1200px;margin:0 auto;padding:32px 24px;}
 
-  /* KPI */
   .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px;}
   .kpi{background:var(--card);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);border:1px solid var(--border);position:relative;overflow:hidden;}
   .kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
@@ -57,22 +53,20 @@
   .kpi-val.money{color:var(--olive);}
   .kpi-sub{font-size:12px;color:var(--muted);margin-top:6px;font-weight:500;}
 
-  /* CARD */
   .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;margin-bottom:24px;}
   .card-hdr{padding:18px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
   .card-hdr h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;}
 
-  /* MONTHS GRID */
   .months-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:24px;}
   .month-card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border:1px solid var(--border);cursor:pointer;transition:all .2s;}
   .month-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,18,8,0.15);border-color:var(--gold);}
+  .month-card.empty-month{opacity:0.45;}
   .month-card h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;margin-bottom:14px;}
   .mc-line{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(201,146,26,0.08);font-size:13px;}
   .mc-total{margin-top:14px;text-align:right;}
   .mc-total .val{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--olive);}
   .mc-total .sub{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
 
-  /* TABLES */
   .stbl{width:100%;border-collapse:collapse;font-size:14px;}
   .stbl thead th{padding:11px 18px;text-align:left;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border);}
   .stbl tbody tr{border-bottom:1px solid rgba(201,146,26,0.08);transition:background .15s;}
@@ -93,29 +87,24 @@
   .chip-pasta{background:#fef3e2;color:#a06400;}.chip-spezie{background:#fce8e8;color:#c0392b;}.chip-etichettatura{background:#e8f5e9;color:#2e7d32;}.chip-riso{background:#e3f2fd;color:#1565c0;}.chip-riso_prezzo{background:#ede7f6;color:#4527a0;}.chip-altro{background:#f3e5f5;color:#6a1b9a;}
   .worker-tag{display:inline-flex;align-items:center;gap:4px;background:#f0f4ff;color:#3b5bdb;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;}
 
-  /* FILTERS */
   .filter-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 24px;background:#fdf8f0;border-bottom:1px solid var(--border);}
   .filter-row select,.filter-row input{padding:8px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;background:var(--card);color:var(--ink);outline:none;font-weight:500;}
   .filter-row select:focus,.filter-row input:focus{border-color:var(--gold);}
-
   .tbl-wrap{overflow-x:auto;}
   .empty{padding:52px 20px;text-align:center;}
   .empty .ei{font-size:48px;opacity:.3;margin-bottom:12px;}
   .empty p{font-family:'Playfair Display',serif;font-size:16px;color:var(--muted);font-style:italic;}
+  .loading{padding:40px;text-align:center;color:var(--muted);font-size:14px;font-weight:600;}
 
-  /* ===== PRINT STYLES ===== */
+  /* PRINT */
   @media print {
-    #login,header,.tabs-bar,.filter-row,.btn-print,.btn-sm,.live-pill,#no-print{display:none!important;}
-    body{background:#fff!important;color:#000!important;}
+    #login,header,.tabs-bar,.filter-row,.btn-print,.btn-sm,.live-pill,.no-print{display:none!important;}
+    body{background:#fff!important;}
     .main{padding:0!important;max-width:100%!important;}
     .card{box-shadow:none!important;border:1px solid #ccc!important;margin-bottom:16px!important;break-inside:avoid;}
     .kpi{box-shadow:none!important;border:1px solid #ccc!important;}
-    .kpi-val.money{color:#2d6a2d!important;}
-    .grand-num{color:#2d6a2d!important;}
-    .money-cell{color:#2d6a2d!important;}
-    .kpi-grid{gap:8px!important;}
-    .dtbl thead th{background:#2d1a0e!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-    .stbl .grand-row td{background:#2d1a0e!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .kpi-val.money,.money-cell,.grand-num{color:#2d6a2d!important;}
+    .dtbl thead th,.stbl .grand-row td{background:#2d1a0e!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     .print-header{display:block!important;}
     .months-grid{grid-template-columns:1fr 1fr!important;}
     @page{margin:1.5cm;size:A4;}
@@ -144,170 +133,301 @@
   <header>
     <div class="hbrand">
       <div class="hlogo">📊</div>
-      <div><h1>Report Pastificio</h1><p>Pannello datore di lavoro</p></div>
+      <div><h1>Report Pastificio</h1><p>Pannello amministrazione</p></div>
     </div>
     <div class="hright">
-      <div class="live-pill"><div class="live-dot"></div>Live – ogni 12s</div>
-      <button class="btn-sm btn-print" onclick="doPrint()">🖨️ Stampa / PDF</button>
-      <button class="btn-sm" onclick="doLogout()">← Esci</button>
+      <div class="live-pill no-print"><div class="live-dot"></div>Dati in tempo reale</div>
+      <button class="btn-sm btn-print no-print" onclick="doPrint()">🖨️ Stampa / PDF</button>
+      <button class="btn-sm no-print" onclick="doLogout()">← Esci</button>
     </div>
   </header>
-  <div class="tabs-bar" id="tabs-bar"></div>
+  <div class="tabs-bar no-print" id="tabs-bar"></div>
   <div class="main" id="main">
-    <div class="print-header">
-      <h1>Report Pastificio</h1>
-      <p id="print-subtitle"></p>
-    </div>
+    <div class="loading">⏳ Connessione al database…</div>
   </div>
 </div>
 
-<script>
-const PIN="1234";
-const PRICES={pasta:0.5,spezie:0.35,etichettatura:0.045,riso:0.068,riso_prezzo:0.095};
-const MONTHS=["NOVEMBRE 2025","GENNAIO 2026","FEBBRAIO 2026","MARZO 2026"];
-let currentMonth='ALL',allData={},customTypes=[],timer=null;
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, onValue, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-function tryLogin(){
-  if(document.getElementById('pin-input').value===PIN){
-    document.getElementById('login').style.display='none';
-    document.getElementById('app').style.display='block';
+const firebaseConfig = {
+  apiKey: "AIzaSyBOFqkem40QWV_0uWmj7ivQMVJ55zDtwhs",
+  authDomain: "pastificio-e004f.firebaseapp.com",
+  databaseURL: "https://pastificio-e004f-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "pastificio-e004f",
+  storageBucket: "pastificio-e004f.firebasestorage.app",
+  messagingSenderId: "439505555806",
+  appId: "1:439505555806:web:7780ecf3f7fc77ca34ffcf"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const PIN = "1234";
+const PRICES = { pasta: 0.5, spezie: 0.35, etichettatura: 0.045, riso: 0.068, riso_prezzo: 0.095 };
+
+function generateMonths() {
+  const months = ["NOVEMBRE 2025"];
+  const names = ["GENNAIO","FEBBRAIO","MARZO","APRILE","MAGGIO","GIUGNO","LUGLIO","AGOSTO","SETTEMBRE","OTTOBRE","NOVEMBRE","DICEMBRE"];
+  names.forEach(n => months.push(n + " 2026"));
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  if (currentYear > 2026) {
+    for (let y = 2027; y <= currentYear + 1; y++) {
+      names.forEach(n => months.push(n + " " + y));
+    }
+  }
+  return months;
+}
+
+const MONTHS = generateMonths();
+
+function getCurrentMonth() {
+  const now = new Date();
+  const names = ["GENNAIO","FEBBRAIO","MARZO","APRILE","MAGGIO","GIUGNO","LUGLIO","AGOSTO","SETTEMBRE","OTTOBRE","NOVEMBRE","DICEMBRE"];
+  return names[now.getMonth()] + " " + now.getFullYear();
+}
+
+let currentMonth = 'ALL';
+let allData = {};
+let customTypes = [];
+let dataListeners = {};
+
+window.tryLogin = function() {
+  if (document.getElementById('pin-input').value === PIN) {
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
     startApp();
   } else {
-    document.getElementById('pin-err').textContent='✕ PIN errato. Riprova.';
-    document.getElementById('pin-input').value='';
+    document.getElementById('pin-err').textContent = '✕ PIN errato. Riprova.';
+    document.getElementById('pin-input').value = '';
   }
-}
-function doLogout(){clearInterval(timer);document.getElementById('login').style.display='flex';document.getElementById('app').style.display='none';document.getElementById('pin-input').value='';document.getElementById('pin-err').textContent='';}
+};
 
-async function loadData(){
-  try{const r=await window.storage.get('pastificio-data',true);if(r)allData=JSON.parse(r.value);else{allData={};MONTHS.forEach(m=>allData[m]=[]);}}catch(e){allData={};MONTHS.forEach(m=>allData[m]=[]);}
-  try{const ct=await window.storage.get('pastificio-custom-types',true);if(ct)customTypes=JSON.parse(ct.value);}catch(e){}
+window.doLogout = function() {
+  document.getElementById('login').style.display = 'flex';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('pin-input').value = '';
+  document.getElementById('pin-err').textContent = '';
+};
+
+async function startApp() {
+  // Ascolta customTypes
+  onValue(ref(db, 'customTypes'), snap => {
+    customTypes = snap.exists() ? (snap.val() || []) : [];
+  });
+  // Ascolta tutti i mesi in realtime
+  MONTHS.forEach(month => {
+    const key = month.replace(/ /g, '_');
+    onValue(ref(db, 'lavori/' + key), snap => {
+      allData[month] = [];
+      if (snap.exists()) {
+        snap.forEach(child => allData[month].push({ fbKey: child.key, ...child.val() }));
+        allData[month].sort((a, b) => a.ts - b.ts);
+      }
+      renderTabs();
+      renderContent();
+    });
+  });
 }
 
-async function startApp(){
-  await loadData();renderTabs();renderContent();
-  timer=setInterval(async()=>{await loadData();renderContent();},12000);
+function renderTabs() {
+  document.getElementById('tabs-bar').innerHTML =
+    `<div class="tab ${currentMonth === 'ALL' ? 'active' : ''}" onclick="sw('ALL')">📊 Riepilogo</div>` +
+    MONTHS.map(m => `<div class="tab ${currentMonth === m ? 'active' : ''}" onclick="sw('${m}')">${m}</div>`).join('');
 }
 
-function renderTabs(){
-  document.getElementById('tabs-bar').innerHTML=
-    `<div class="tab ${currentMonth==='ALL'?'active':''}" onclick="sw('ALL')">📊 Riepilogo</div>`+
-    MONTHS.map(m=>`<div class="tab ${currentMonth===m?'active':''}" onclick="sw('${m}')">${m}</div>`).join('');
-}
-function sw(m){currentMonth=m;renderTabs();renderContent();}
+window.sw = function(m) {
+  currentMonth = m;
+  renderTabs();
+  renderContent();
+  setTimeout(() => {
+    const active = document.querySelector('.tab.active');
+    if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }, 100);
+};
 
-function renderContent(){
-  const main=document.getElementById('main');
-  const subtitle=currentMonth==='ALL'?'Riepilogo generale – tutti i mesi':'Dettaglio '+currentMonth;
-  document.getElementById('print-subtitle').textContent=subtitle+' – Stampato il '+new Date().toLocaleDateString('it-IT');
-  main.innerHTML=`<div class="print-header"><h1>Report Pastificio</h1><p>${subtitle} – ${new Date().toLocaleDateString('it-IT')}</p></div>`+(currentMonth==='ALL'?renderSummary():renderMonth(currentMonth));
+function renderContent() {
+  const main = document.getElementById('main');
+  const now = new Date().toLocaleDateString('it-IT');
+  const subtitle = currentMonth === 'ALL' ? 'Riepilogo generale' : currentMonth;
+  main.innerHTML = `<div class="print-header"><h1>Report Pastificio</h1><p>${subtitle} – Stampato il ${now}</p></div>` +
+    (currentMonth === 'ALL' ? renderSummary() : renderMonth(currentMonth));
 }
 
-function renderSummary(){
-  let tPezzi=0,tImponibile=0,tIva=0,tVoci=0;
-  const mcs=MONTHS.map(m=>{const rows=allData[m]||[],s=calcSummary(rows);tPezzi+=sumPz(rows);tImponibile+=s.imponibile;tIva+=s.iva;tVoci+=rows.length;return{m,rows,s,pezzi:sumPz(rows)};});
+function renderSummary() {
+  // Solo mesi con dati o mesi passati/correnti
+  const now = new Date();
+  const currentMonthStr = getCurrentMonth();
+  const visibleMonths = MONTHS.filter(m => {
+    const rows = allData[m] || [];
+    if (rows.length > 0) return true;
+    // Mostra anche mesi passati e corrente anche se vuoti
+    const idx = MONTHS.indexOf(m);
+    const currentIdx = MONTHS.indexOf(currentMonthStr);
+    return idx <= currentIdx;
+  });
+
+  let tPezzi = 0, tImponibile = 0, tIva = 0, tVoci = 0;
+  const mcs = visibleMonths.map(m => {
+    const rows = allData[m] || [];
+    const s = calcSummary(rows);
+    tPezzi += sumPz(rows); tImponibile += s.imponibile; tIva += s.iva; tVoci += rows.length;
+    return { m, rows, s, pezzi: sumPz(rows) };
+  });
+
   return `
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-label">Voci totali</div><div class="kpi-val">${tVoci}</div><div class="kpi-sub">su ${MONTHS.length} mesi</div></div>
+    <div class="kpi"><div class="kpi-label">Voci totali</div><div class="kpi-val">${tVoci}</div><div class="kpi-sub">tutti i mesi</div></div>
     <div class="kpi"><div class="kpi-label">Pezzi lavorati</div><div class="kpi-val">${tPezzi.toLocaleString('it')}</div></div>
-    <div class="kpi green"><div class="kpi-label">Imponibile</div><div class="kpi-val money">€ ${tImponibile.toFixed(2)}</div><div class="kpi-sub">+ IVA € ${tIva.toFixed(2)}</div></div>
-    <div class="kpi rust"><div class="kpi-label">Totale c/IVA 22%</div><div class="kpi-val money">€ ${(tImponibile+tIva).toFixed(2)}</div></div>
+    <div class="kpi green"><div class="kpi-label">Imponibile totale</div><div class="kpi-val money">€ ${tImponibile.toFixed(2)}</div><div class="kpi-sub">+ IVA € ${tIva.toFixed(2)}</div></div>
+    <div class="kpi rust"><div class="kpi-label">Totale c/IVA 22%</div><div class="kpi-val money">€ ${(tImponibile + tIva).toFixed(2)}</div></div>
   </div>
   <div class="months-grid">
-    ${mcs.map(mc=>`<div class="month-card" onclick="sw('${mc.m}')">
-      <h4>${mc.m}</h4>
-      ${mc.s.lines.map(l=>`<div class="mc-line"><span><span class="chip chip-${chipCls(l.tipo)}">${tLbl(l.tipo)}</span> ${l.pezzi.toLocaleString('it')} pz</span><span style="font-weight:700;">€ ${l.importo.toFixed(2)}</span></div>`).join('')}
-      <div class="mc-total"><div class="val">€ ${(mc.s.imponibile+mc.s.iva).toFixed(2)}</div><div class="sub">totale c/iva</div></div>
-    </div>`).join('')}
+    ${mcs.map(mc => `
+      <div class="month-card ${mc.rows.length === 0 ? 'empty-month' : ''}" onclick="sw('${mc.m}')">
+        <h4>${mc.m}</h4>
+        ${mc.rows.length === 0
+          ? `<p style="font-size:13px;color:var(--muted);font-style:italic;">Nessun lavoro inserito</p>`
+          : mc.s.lines.map(l => `<div class="mc-line"><span><span class="chip chip-${chipCls(l.tipo)}">${tLbl(l.tipo)}</span> ${l.pezzi.toLocaleString('it')} pz</span><span style="font-weight:700;">€ ${l.importo.toFixed(2)}</span></div>`).join('')
+        }
+        <div class="mc-total"><div class="val">€ ${(mc.s.imponibile + mc.s.iva).toFixed(2)}</div><div class="sub">totale c/iva</div></div>
+      </div>`).join('')}
   </div>
   <div class="card">
     <div class="card-hdr"><h3>Riepilogo per mese</h3></div>
     <div class="tbl-wrap"><table class="stbl">
       <thead><tr><th>Mese</th><th>Voci</th><th>Pezzi tot.</th><th>Imponibile</th><th>IVA 22%</th><th>Totale</th></tr></thead>
-      <tbody>${mcs.map(mc=>`<tr><td><strong>${mc.m}</strong></td><td>${mc.rows.length}</td><td>${mc.pezzi.toLocaleString('it')}</td><td>€ ${mc.s.imponibile.toFixed(2)}</td><td>€ ${mc.s.iva.toFixed(2)}</td><td class="money-cell">€ ${(mc.s.imponibile+mc.s.iva).toFixed(2)}</td></tr>`).join('')}</tbody>
+      <tbody>${mcs.map(mc => `<tr>
+        <td><strong>${mc.m}</strong></td><td>${mc.rows.length}</td><td>${mc.pezzi.toLocaleString('it')}</td>
+        <td>€ ${mc.s.imponibile.toFixed(2)}</td><td>€ ${mc.s.iva.toFixed(2)}</td>
+        <td class="money-cell">€ ${(mc.s.imponibile + mc.s.iva).toFixed(2)}</td>
+      </tr>`).join('')}</tbody>
       <tfoot>
-        <tr><td colspan="3"><strong>TOTALI</strong></td><td>€ ${tImponibile.toFixed(2)}</td><td>€ ${tIva.toFixed(2)}</td><td class="money-cell">€ ${(tImponibile+tIva).toFixed(2)}</td></tr>
-        <tr class="grand-row"><td colspan="5">TOTALE GENERALE c/IVA</td><td class="grand-num">€ ${(tImponibile+tIva).toFixed(2)}</td></tr>
+        <tr><td colspan="3"><strong>TOTALI</strong></td><td>€ ${tImponibile.toFixed(2)}</td><td>€ ${tIva.toFixed(2)}</td><td class="money-cell">€ ${(tImponibile + tIva).toFixed(2)}</td></tr>
+        <tr class="grand-row"><td colspan="5">TOTALE GENERALE c/IVA</td><td class="grand-num">€ ${(tImponibile + tIva).toFixed(2)}</td></tr>
       </tfoot>
     </table></div>
   </div>`;
 }
 
-function renderMonth(month){
-  const rows=allData[month]||[];
-  const s=calcSummary(rows);
-  // Unique workers
-  const workers=[...new Set(rows.filter(r=>r.lavoratore).map(r=>r.lavoratore))];
+function renderMonth(month) {
+  const rows = allData[month] || [];
+  const s = calcSummary(rows);
+  const workers = [...new Set(rows.filter(r => r.lavoratore).map(r => r.lavoratore))];
+
   return `
   <div class="kpi-grid">
     <div class="kpi"><div class="kpi-label">Voci</div><div class="kpi-val">${rows.length}</div></div>
     <div class="kpi"><div class="kpi-label">Pezzi</div><div class="kpi-val">${sumPz(rows).toLocaleString('it')}</div></div>
     <div class="kpi green"><div class="kpi-label">Imponibile</div><div class="kpi-val money">€ ${s.imponibile.toFixed(2)}</div><div class="kpi-sub">+ IVA € ${s.iva.toFixed(2)}</div></div>
-    <div class="kpi rust"><div class="kpi-label">Totale c/IVA</div><div class="kpi-val money">€ ${(s.imponibile+s.iva).toFixed(2)}</div></div>
+    <div class="kpi rust"><div class="kpi-label">Totale c/IVA</div><div class="kpi-val money">€ ${(s.imponibile + s.iva).toFixed(2)}</div></div>
   </div>
+
   <div class="card">
     <div class="card-hdr"><h3>Riepilogo per tipo – ${month}</h3></div>
     <div class="tbl-wrap"><table class="stbl">
       <thead><tr><th>Tipo</th><th>Pezzi</th><th>€/cad.</th><th>Importo</th></tr></thead>
-      <tbody>${s.lines.map(l=>`<tr><td><span class="chip chip-${chipCls(l.tipo)}">${tLbl(l.tipo)}</span></td><td>${l.pezzi.toLocaleString('it')}</td><td>€ ${l.prezzo.toFixed(3)}</td><td class="money-cell">€ ${l.importo.toFixed(2)}</td></tr>`).join('')}</tbody>
+      <tbody>${s.lines.map(l => `<tr>
+        <td><span class="chip chip-${chipCls(l.tipo)}">${tLbl(l.tipo)}</span></td>
+        <td>${l.pezzi.toLocaleString('it')}</td><td>€ ${l.prezzo.toFixed(3)}</td>
+        <td class="money-cell">€ ${l.importo.toFixed(2)}</td>
+      </tr>`).join('')}</tbody>
       <tfoot>
         <tr><td colspan="3"><strong>Imponibile</strong></td><td class="money-cell">€ ${s.imponibile.toFixed(2)}</td></tr>
         <tr><td colspan="3">IVA 22%</td><td class="money-cell">€ ${s.iva.toFixed(2)}</td></tr>
-        <tr class="grand-row"><td colspan="3">TOTALE</td><td class="grand-num">€ ${(s.imponibile+s.iva).toFixed(2)}</td></tr>
+        <tr class="grand-row"><td colspan="3">TOTALE</td><td class="grand-num">€ ${(s.imponibile + s.iva).toFixed(2)}</td></tr>
       </tfoot>
     </table></div>
   </div>
-  ${workers.length>0?`
+
+  ${workers.length > 0 ? `
   <div class="card">
     <div class="card-hdr"><h3>Riepilogo per lavoratore – ${month}</h3></div>
     <div class="tbl-wrap"><table class="stbl">
       <thead><tr><th>Lavoratore</th><th>Voci</th><th>Pezzi tot.</th><th>Imponibile</th><th>Totale c/IVA</th></tr></thead>
-      <tbody>${workers.map(w=>{const wr=rows.filter(r=>r.lavoratore===w);const ws=calcSummary(wr);return`<tr><td><span class="worker-tag">👤 ${w}</span></td><td>${wr.length}</td><td>${sumPz(wr).toLocaleString('it')}</td><td>€ ${ws.imponibile.toFixed(2)}</td><td class="money-cell">€ ${(ws.imponibile+ws.iva).toFixed(2)}</td></tr>`;}).join('')}</tbody>
+      <tbody>${workers.map(w => {
+        const wr = rows.filter(r => r.lavoratore === w);
+        const ws = calcSummary(wr);
+        return `<tr>
+          <td><span class="worker-tag">👤 ${w}</span></td>
+          <td>${wr.length}</td><td>${sumPz(wr).toLocaleString('it')}</td>
+          <td>€ ${ws.imponibile.toFixed(2)}</td>
+          <td class="money-cell">€ ${(ws.imponibile + ws.iva).toFixed(2)}</td>
+        </tr>`;
+      }).join('')}</tbody>
     </table></div>
-  </div>`:''} 
+  </div>` : ''}
+
   <div class="card">
     <div class="card-hdr">
       <h3>Dettaglio lavori – ${month}</h3>
-      <div style="font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px;" id="no-print"><span class="live-dot" style="display:inline-block;width:6px;height:6px;background:var(--olive);border-radius:50%;"></span>auto-aggiornamento ogni 12s</div>
     </div>
-    <div class="filter-row" id="no-print">
-      <select id="tipo-filter" onchange="applyFilter()"><option value="">Tutti i tipi</option><option value="pasta">Pasta</option><option value="spezie">Spezie</option><option value="etichettatura">Etichettatura</option><option value="riso">Riso</option><option value="riso_prezzo">Riso+Prezzo</option>${customTypes.map(ct=>`<option value="altro_${ct.id}">${ct.label}</option>`).join('')}</select>
-      <select id="worker-filter" onchange="applyFilter()"><option value="">Tutti i lavoratori</option>${workers.map(w=>`<option value="${w}">👤 ${w}</option>`).join('')}</select>
+    <div class="filter-row no-print">
+      <select id="tipo-filter" onchange="applyFilter()">
+        <option value="">Tutti i tipi</option>
+        <option value="pasta">Pasta</option><option value="spezie">Spezie</option>
+        <option value="etichettatura">Etichettatura</option><option value="riso">Riso</option>
+        <option value="riso_prezzo">Riso+Prezzo</option>
+        ${customTypes.map(ct => `<option value="altro_${ct.id}">${ct.label}</option>`).join('')}
+      </select>
+      <select id="worker-filter" onchange="applyFilter()">
+        <option value="">Tutti i lavoratori</option>
+        ${workers.map(w => `<option value="${w}">👤 ${w}</option>`).join('')}
+      </select>
       <input type="text" id="search-input" placeholder="🔍 Cerca ordine, descrizione…" oninput="applyFilter()" style="min-width:200px;">
     </div>
-    ${rows.length===0?`<div class="empty"><div class="ei">📭</div><p>Nessun lavoro per ${month}</p></div>`:`
-    <div class="tbl-wrap"><table class="dtbl" id="dtbl">
-      <thead><tr><th>Data</th><th>Lavoratore</th><th>Descrizione</th><th>N° Ordine</th><th>Pezzi</th><th>Cartoni</th><th>Tipo</th><th>€/cad.</th><th>Importo</th><th>Note</th></tr></thead>
-      <tbody>${rows.map(r=>{const pr=PRICES[r.tipo]||0;return`<tr data-tipo="${r.tipo}" data-worker="${r.lavoratore||''}" data-q="${(r.descrizione+' '+r.ordine).toLowerCase()}"><td>${r.data}</td><td><span class="worker-tag">👤 ${r.lavoratore||'—'}</span></td><td><strong>${r.descrizione}</strong></td><td style="font-family:monospace;font-weight:700;">${r.ordine||'—'}</td><td><strong>${Number(r.pezzi).toLocaleString('it')}</strong></td><td>${r.cartoni||'—'}</td><td><span class="chip chip-${chipCls(r.tipo)}">${tLbl(r.tipo)}</span></td><td style="color:var(--muted);font-weight:600;">€ ${pr.toFixed(3)}</td><td class="money-cell">€ ${(r.pezzi*pr).toFixed(2)}</td><td style="font-size:11px;color:var(--muted);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.note||'—'}</td></tr>`;}).join('')}</tbody>
-    </table></div>`}
+    ${rows.length === 0
+      ? `<div class="empty"><div class="ei">📭</div><p>Nessun lavoro per ${month}</p></div>`
+      : `<div class="tbl-wrap"><table class="dtbl" id="dtbl">
+          <thead><tr><th>Data</th><th>Lavoratore</th><th>Descrizione</th><th>N° Ordine</th><th>Pezzi</th><th>Cartoni</th><th>Tipo</th><th>€/cad.</th><th>Importo</th><th>Note</th></tr></thead>
+          <tbody>${rows.map(r => {
+            const pr = PRICES[r.tipo] || 0;
+            return `<tr data-tipo="${r.tipo}" data-worker="${r.lavoratore || ''}" data-q="${(r.descrizione + ' ' + r.ordine).toLowerCase()}">
+              <td>${r.data}</td>
+              <td><span class="worker-tag">👤 ${r.lavoratore || '—'}</span></td>
+              <td><strong>${r.descrizione}</strong></td>
+              <td style="font-family:monospace;font-weight:700;">${r.ordine || '—'}</td>
+              <td><strong>${Number(r.pezzi).toLocaleString('it')}</strong></td>
+              <td>${r.cartoni || '—'}</td>
+              <td><span class="chip chip-${chipCls(r.tipo)}">${tLbl(r.tipo)}</span></td>
+              <td style="color:var(--muted);font-weight:600;">€ ${pr.toFixed(3)}</td>
+              <td class="money-cell">€ ${(r.pezzi * pr).toFixed(2)}</td>
+              <td style="font-size:11px;color:var(--muted);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.note || '—'}</td>
+            </tr>`;
+          }).join('')}</tbody>
+        </table></div>`}
   </div>`;
 }
 
-function applyFilter(){
-  const tipo=document.getElementById('tipo-filter')?.value||'';
-  const worker=document.getElementById('worker-filter')?.value||'';
-  const q=(document.getElementById('search-input')?.value||'').toLowerCase();
-  document.querySelectorAll('#dtbl tbody tr').forEach(r=>{
-    const ok=(!tipo||r.dataset.tipo===tipo)&&(!worker||r.dataset.worker===worker)&&(!q||r.dataset.q.includes(q));
-    r.style.display=ok?'':'none';
+window.applyFilter = function() {
+  const tipo = document.getElementById('tipo-filter')?.value || '';
+  const worker = document.getElementById('worker-filter')?.value || '';
+  const q = (document.getElementById('search-input')?.value || '').toLowerCase();
+  document.querySelectorAll('#dtbl tbody tr').forEach(r => {
+    const ok = (!tipo || r.dataset.tipo === tipo) && (!worker || r.dataset.worker === worker) && (!q || r.dataset.q.includes(q));
+    r.style.display = ok ? '' : 'none';
   });
-}
+};
 
-function doPrint(){
-  document.getElementById('print-subtitle').textContent=(currentMonth==='ALL'?'Riepilogo generale':currentMonth)+' – Stampato il '+new Date().toLocaleDateString('it-IT');
-  window.print();
-}
+window.doPrint = function() { window.print(); };
 
-function calcSummary(rows){
-  const byTipo={};
-  rows.forEach(r=>{if(!byTipo[r.tipo])byTipo[r.tipo]=0;byTipo[r.tipo]+=r.pezzi||0;});
-  const lines=Object.entries(byTipo).map(([tipo,pezzi])=>({tipo,pezzi,prezzo:PRICES[tipo]||0,importo:pezzi*(PRICES[tipo]||0)}));
-  const imponibile=lines.reduce((a,l)=>a+l.importo,0),iva=imponibile*0.22;
-  return{lines,imponibile,iva};
+function calcSummary(rows) {
+  const byTipo = {};
+  rows.forEach(r => { if (!byTipo[r.tipo]) byTipo[r.tipo] = 0; byTipo[r.tipo] += r.pezzi || 0; });
+  const lines = Object.entries(byTipo).map(([tipo, pezzi]) => ({ tipo, pezzi, prezzo: PRICES[tipo] || 0, importo: pezzi * (PRICES[tipo] || 0) }));
+  const imponibile = lines.reduce((a, l) => a + l.importo, 0), iva = imponibile * 0.22;
+  return { lines, imponibile, iva };
 }
-function sumPz(rows){return rows.reduce((a,r)=>a+(r.pezzi||0),0);}
-function chipCls(t){return{pasta:'pasta',spezie:'spezie',etichettatura:'etichettatura',riso:'riso',riso_prezzo:'riso_prezzo'}[t]||'altro';}
-function tLbl(t){const m={pasta:'Pasta',spezie:'Spezie',etichettatura:'Etich.',riso:'Riso',riso_prezzo:'Riso+Prez'};if(m[t])return m[t];if(t&&t.startsWith('altro_')){const ct=customTypes.find(c=>c.id===t.replace('altro_',''));return ct?ct.label:'Altro';}return t||'Altro';}
+function sumPz(rows) { return rows.reduce((a, r) => a + (r.pezzi || 0), 0); }
+function chipCls(t) { return { pasta: 'pasta', spezie: 'spezie', etichettatura: 'etichettatura', riso: 'riso', riso_prezzo: 'riso_prezzo' }[t] || 'altro'; }
+function tLbl(t) {
+  const m = { pasta: 'Pasta', spezie: 'Spezie', etichettatura: 'Etich.', riso: 'Riso', riso_prezzo: 'Riso+Prez' };
+  if (m[t]) return m[t];
+  if (t && t.startsWith('altro_')) { const ct = customTypes.find(c => c.id === t.replace('altro_', '')); return ct ? ct.label : 'Altro'; }
+  return t || 'Altro';
+}
 </script>
 </body>
 </html>
